@@ -3,7 +3,7 @@
 // @Email:  ctosterhout@alaska.edu
 // @Project: divesemester
 // @Last modified by:   ctosterhout
-// @Last modified time: 2017-05-31T10:36:08-08:00
+// @Last modified time: 2017-05-31T14:09:21-08:00
 // @License: Released under MIT License. Copyright 2016 University of Alaska Southeast.  For more details, see https://opensource.org/licenses/MIT
 
 @import "partials/base";
@@ -93,8 +93,11 @@ footer {
     @include page-section();
     border-top: 10px solid $color-bg;
     padding: 3em 4em;
-    // margin: 0 auto;
     background: linear-gradient(to bottom, rgb(212,226,236), white 25%, white);
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: $color-main-menu;
 }
 
 .navbar-nav > li > a {

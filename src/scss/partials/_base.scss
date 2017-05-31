@@ -3,7 +3,7 @@
 // @Email:  ctosterhout@alaska.edu
 // @Project: catalog
 // @Last modified by:   ctosterhout
-// @Last modified time: 2017-05-31T10:35:14-08:00
+// @Last modified time: 2017-05-31T14:06:04-08:00
 // @License: Released under MIT License. Copyright 2016 University of Alaska Southeast.  For more details, see https://opensource.org/licenses/MIT
 
 @import 'paths';
@@ -15,12 +15,14 @@ $font-family-body: 'Roboto', sans-serif;
 $color-top-bar: $color-uas-green;
 $color-menu-active: $color-uas-green;
 $color-search: $color-uas-juneau;
-$color-dark-gray: #5F5D5D;
+// $color-dark-gray: #5F5D5D;
+$color-dark-gray: #606060;
 $color-main: #FFF;
 $color-main-menu: $color-dark-gray;
 $color-tag: $color-dark-gray;
 $color-tab: $color-dark-gray;
-$color-panel-menu-header-bg: #219ADE;
+// $color-panel-menu-header-bg: #219ADE;
+$color-panel-menu-header-bg: $color-uas-blue;
 $color-panel-menu-header: #FFF;
 $color-bg: #6E8EAA;
 $color-link-link: #0645AD;
