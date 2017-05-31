@@ -1,0 +1,83 @@
+// @Author: Colin Osterhout <ctosterhout>
+// @Date:   2017-04-18T19:19:18-08:00
+// @Email:  ctosterhout@alaska.edu
+// @Project: catalog
+// @Last modified by:   ctosterhout
+// @Last modified time: 2017-05-31T10:35:14-08:00
+// @License: Released under MIT License. Copyright 2016 University of Alaska Southeast.  For more details, see https://opensource.org/licenses/MIT
+
+@import 'paths';
+@import 'modules/uas-palette';
+@import 'bootstrap/mixins';
+@import url( 'https://fonts.googleapis.com/css?family=Lato|Roboto');
+$font-family-heading: 'Lato', sans-serif;
+$font-family-body: 'Roboto', sans-serif;
+$color-top-bar: $color-uas-green;
+$color-menu-active: $color-uas-green;
+$color-search: $color-uas-juneau;
+$color-dark-gray: #5F5D5D;
+$color-main: #FFF;
+$color-main-menu: $color-dark-gray;
+$color-tag: $color-dark-gray;
+$color-tab: $color-dark-gray;
+$color-panel-menu-header-bg: #219ADE;
+$color-panel-menu-header: #FFF;
+$color-bg: #6E8EAA;
+$color-link-link: #0645AD;
+$color-link-visited: #0645AD;
+$color-link-active: #0645AD;
+$color-link-hover: #0645AD;
+$color-header-heading: #115FA2;
+$border-link-hover: 2px solid #0645AD;
+$color-li-bg-active: #e5f5d3;
+$border-menu-width: 4px;
+$border-menu-link-hover: $border-menu-width solid $color-uas-green;
+$menu-list-padding: 32px;
+$font-family-header: 'Lato', sans-serif;
+$font-family-body: 'Roboto', sans-serif;
+$width-main: 1200px;
+
+// Modified from snippet created by Elijah Manor: http://elijahmanor.com/nested-maps-for-typesetting-in-sass/
+@mixin typeset( $type: copy ) {
+    $types: (
+        h1: ( font-family: $font-family-header, font-size: 2.4rem, font-weight: 400, color: #000 ),
+        h2: ( font-family: $font-family-header, font-size: 2rem, font-weight: 400, color: #072B65 ),
+        h3: ( font-family: $font-family-header, font-size: 1.8rem, font-weight: 400, color: #1C1C1C ),
+        h4: ( font-family: $font-family-header, font-size: 1.6rem, font-weight: 400, color: #1C1C1C ),
+        h5: ( font-family: $font-family-header, font-size: 1.4rem, font-weight: 700, color: #1C1C1C ),
+        copy: ( font-family: $font-family-body, font-size: 1.4rem, font-weight: 400, color: #000 ),
+        tag: ( font-family: $font-family-header, font-size: 1.5rem, font-weight: 400, color: $color-dark-gray ),
+        navlist: ( font-family: $font-family-body, font-size: 1.4rem, font-weight: 400, color: #000 ),
+        navlist-top: ( font-family: $font-family-body, font-size: 1.6rem, font-weight: 400, color: #000 )
+    );
+
+    $type: map-get($types, $type);
+    font-size: map-get($type, font-size);
+    @if map-has-key($type, font-weight) {
+        font-weight: map-get($type, font-weight);
+    }
+    @if map-has-key($type, line-height) {
+        line-height: map-get($type, line-height);
+    }
+    @if map-has-key($type, color) {
+        color: map-get($type, color);
+    }
+    @if map-has-key($type, font-family) {
+        font-family: map-get($type, font-family);
+    }
+}
+
+@mixin page-section() {
+    width: 100%;
+    background-color: $color-main;
+}
+
+$screen-xs-min: 480px;
+$screen-xs-max: 767px;
+$screen-sm-min: 768px;
+$screen-sm-max: 979px;
+$screen-md-min: 980px;
+$screen-md-max: 1199px;
+$screen-lg-min: 1200px;
+$logo-horizontal-svg: url($path_img_base + 'logo/uas-logo-horizontal.svg');
+@charset "UTF-8";

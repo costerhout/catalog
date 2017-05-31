@@ -1,0 +1,269 @@
+// @Author: Colin Osterhout <ctosterhout>
+// @Date:   2017-04-18T18:00:59-08:00
+// @Email:  ctosterhout@alaska.edu
+// @Project: divesemester
+// @Last modified by:   ctosterhout
+// @Last modified time: 2017-05-31T10:36:08-08:00
+// @License: Released under MIT License. Copyright 2016 University of Alaska Southeast.  For more details, see https://opensource.org/licenses/MIT
+
+@import "partials/base";
+@import "partials/menu";
+
+html, body {
+    height: 100%;
+}
+
+html {
+    background-color: $color-bg;
+}
+
+body {
+    @include typeset(copy);
+    // Set the maximum page content area and center it left to right
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    // Used to anchor the footer on the bottom of the viewport
+    display: flex;
+    flex-direction: column;
+
+    // Body styles
+    background-color: $color-bg;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+main > h1 {
+    margin-top: 0;
+}
+
+h1 {
+    @include typeset(h1);
+}
+
+h2 {
+    @include typeset(h2);
+}
+
+h3 {
+    @include typeset(h3);
+}
+
+h4 {
+    @include typeset(h4);
+}
+
+h5 {
+    @include typeset(h5);
+}
+
+a {
+    &, &:link, &:visited, &:hover, &:active {
+        color: $color-link-link;
+    }
+
+    &:hover, &:active {
+        // border-bottom: $border-link-hover;
+    }
+}
+
+header {
+    @include page-section();
+    padding: 1rem;
+
+    h2 {
+        margin: 0;
+    }
+}
+
+main {
+    @include page-section();
+    padding: 2em 4em;
+
+    /* Used to anchor the footer on the bottom of the viewport */
+    flex: 1 0 auto;
+}
+
+footer {
+    @include page-section();
+    border-top: 10px solid $color-bg;
+    padding: 3em 4em;
+    // margin: 0 auto;
+    background: linear-gradient(to bottom, rgb(212,226,236), white 25%, white);
+}
+
+.navbar-nav > li > a {
+    &:hover, &:active {
+        border-bottom: $border-menu-link-hover;
+    }
+}
+
+.navbar-nav > li.menu-current {
+    border-bottom: $border-menu-link-hover;
+    background-color: $color-li-bg-active;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border: none;
+}
+
+// Target all lists underneath panel-menu navs
+.panel-menu nav ul {
+    @include typeset(navlist);
+    list-style: none;
+    padding-left: 0;
+    line-height: 2;
+
+    li {
+        padding-left: $menu-list-padding;
+        text-indent: -1em;
+    }
+
+    li.menu-current {
+        border-left: $border-menu-link-hover;
+        padding-left: $menu-list-padding - $border-menu-width;
+    }
+}
+
+// Target the top level list only underneath panel-menu navs
+.panel-menu nav > ul {
+    @include typeset(navlist-top);
+}
+
+.logo-uas {
+    background-image: $logo-horizontal-svg;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.social-media-links .list-icons img {
+    height: 2.5rem;
+}
+
+.panel-heading > h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.panel-menu {
+    @include panel-variant($color-uas-green, $color-panel-menu-header, $color-panel-menu-header-bg, $color-panel-menu-header-bg);
+
+    border: none;
+    border-radius: 0;
+
+    .panel-heading > h2 {
+        color: $color-panel-menu-header;
+    }
+
+    .panel-body {
+        border-left: 2px solid $color-uas-green;
+    }
+
+    box-shadow: none;
+}
+
+.tag-content {
+    @include typeset(tag);
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.tab-pane {
+    padding-top: 1em;
+}
+
+#menuMain-search {
+    .form-control {
+        border: 2px solid $color-search;
+    }
+
+    .btn {
+        color: white;
+        background-color: $color-search;
+        border: 1px solid $color-search;
+    }
+}
+
+@media screen and (min-width: $screen-sm-min) {
+    header {
+        // min-height: 175px;
+        position: relative;
+        background-color: #FFF;
+
+        h2 {
+            @include typeset(h1);
+            color: $color-header-heading;
+            text-align: center;
+            margin-top: 0;
+
+            a {
+                &,
+                &:link,
+                &:visited,
+                &:hover,
+                &:active {
+                    color: $color-header-heading;
+                }
+            }
+        }
+
+        .navbar {
+            margin-bottom: 5px;
+        }
+
+        .navbar-default {
+            // background-color: $color-translucent;
+            // border-color: $color-translucent;
+        }
+
+        .navbar-default .navbar-nav > li > a {
+            padding-top: 0;
+            &,
+            &:link,
+            &:visited,
+            &:hover,
+            &:active {
+                // color: $color-near-white;
+            }
+        }
+
+        .navbar-nav {
+            padding: 5px;
+
+            &>li:not(:first-of-type) {
+                // border-left: 1px solid $color-near-white;
+            }
+        }
+
+        .navbar-nav > li {
+            max-width: 130px;
+        }
+
+        .navbar-nav > li.menu-current {
+            background-color: inherit;
+        }
+    }
+
+    footer {
+        bottom: 0;
+    }
+
+    .logo-uas {
+        min-height: 175px;
+    }
+}
