@@ -1,0 +1,355 @@
+/*!
+ * University of Alaska Southeast
+ * http://alaska.github.com/ctosterhout/catalog/
+ * @author Colin Osterhout (ctosterhout@alaska.edu)
+ * @version 0.1.0, compiled Wed, 31 May 2017 18:45:17 GMT
+ * Copyright (c) 2017 University of Alaska Southeast. For licensing information, see http://github.com/costerhout/homepage/LICENSE.
+ */
+
+@import url("https://fonts.googleapis.com/css?family=Lato|Roboto");
+/* Required styles; changing these may break the menu */
+.menu-sliding {
+  overflow: hidden;
+}
+
+.menu-sliding > ul {
+  left: 0;
+  position: relative;
+}
+
+.menu-sliding ul,
+.menu-sliding li {
+  list-style: none;
+  margin: 0;
+}
+
+.menu-sliding ul {
+  width: 100%;
+}
+
+.menu-sliding a {
+  display: block;
+}
+
+.menu-sliding li ul {
+  display: none;
+  left: 100%;
+  position: absolute;
+  top: 0;
+}
+
+/* Default theme */
+.menu-sliding a {
+  background: #AAA;
+  border: none;
+  color: #FFF;
+  padding: 1em;
+}
+
+.menu-sliding a:hover {
+  background: #000;
+}
+
+.menu-sliding a.next:after {
+  content: '\276f';
+  margin-left: 1em;
+  float: right;
+}
+
+.menu-sliding a.back:before {
+  content: '\276e';
+  margin-right: 1em;
+  float: left;
+}
+
+.navbar-header .navbar-brand {
+  display: block;
+}
+.navbar-header .navbar-brand img {
+  display: inline;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-nav .dropdown-menu .caret {
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+
+  .navbar-header .navbar-brand {
+    display: none;
+  }
+}
+html, body {
+  height: 100%;
+}
+
+html {
+  background-color: #6E8EAA;
+}
+
+body {
+  font-size: 22.4px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #6E8EAA;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+main > h1 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 38.4px;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #000;
+  font-family: "Lato", sans-serif;
+}
+
+h2 {
+  font-size: 32px;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #072B65;
+  font-family: "Lato", sans-serif;
+}
+
+h3 {
+  font-size: 28.8px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #1C1C1C;
+  font-family: "Lato", sans-serif;
+}
+
+h4 {
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #1C1C1C;
+  font-family: "Lato", sans-serif;
+}
+
+h5 {
+  font-size: 22.4px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1C1C1C;
+  font-family: "Lato", sans-serif;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  color: #0645AD;
+}
+
+header {
+  width: 100%;
+  background-color: #FFF;
+  padding: 16px;
+  padding: 1rem;
+}
+header h2 {
+  margin: 0;
+}
+
+main {
+  width: 100%;
+  background-color: #FFF;
+  padding: 2em 4em;
+  /* Used to anchor the footer on the bottom of the viewport */
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+footer {
+  width: 100%;
+  background-color: #FFF;
+  border-top: 10px solid #6E8EAA;
+  padding: 3em 4em;
+  background: -webkit-linear-gradient(top, #d4e2ec, white 25%, white);
+  background: linear-gradient(to bottom, #d4e2ec, white 25%, white);
+}
+
+.navbar-nav > li > a:hover, .navbar-nav > li > a:active {
+  border-bottom: 4px solid #8dca46;
+}
+
+.navbar-nav > li.menu-current {
+  border-bottom: 4px solid #8dca46;
+  background-color: #e5f5d3;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.navbar {
+  border-radius: 0;
+}
+
+.navbar-default {
+  background-color: transparent;
+  border: none;
+}
+
+.panel-menu nav ul {
+  font-size: 22.4px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  padding-left: 0;
+  line-height: 2;
+}
+.panel-menu nav ul li {
+  padding-left: 32px;
+  text-indent: -1em;
+}
+.panel-menu nav ul li.menu-current {
+  border-left: 4px solid #8dca46;
+  padding-left: 28px;
+}
+
+.panel-menu nav > ul {
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+}
+
+.logo-uas {
+  background-image: url("//uas.alaska.edu/a_assets/images/logo/uas-logo-horizontal.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.social-media-links .list-icons img {
+  height: 40px;
+  height: 2.5rem;
+}
+
+.panel-heading > h2 {
+  margin: 0;
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.panel-menu {
+  border-color: #8dca46;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.panel-menu > .panel-heading {
+  color: #FFF;
+  background-color: #219ADE;
+  border-color: #219ADE;
+}
+.panel-menu > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #8dca46;
+}
+.panel-menu > .panel-heading .badge {
+  color: #219ADE;
+  background-color: #FFF;
+}
+.panel-menu > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #8dca46;
+}
+.panel-menu .panel-heading > h2 {
+  color: #FFF;
+}
+.panel-menu .panel-body {
+  border-left: 2px solid #8dca46;
+}
+
+.tag-content {
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #5F5D5D;
+  font-family: "Lato", sans-serif;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.tab-pane {
+  padding-top: 1em;
+}
+
+#menuMain-search .form-control {
+  border: 2px solid #74a73a;
+}
+#menuMain-search .btn {
+  color: white;
+  background-color: #74a73a;
+  border: 1px solid #74a73a;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    position: relative;
+    background-color: #FFF;
+  }
+  header h2 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #000;
+    font-family: "Lato", sans-serif;
+    color: #115FA2;
+    text-align: center;
+    margin-top: 0;
+  }
+  header h2 a, header h2 a:link, header h2 a:visited, header h2 a:hover, header h2 a:active {
+    color: #115FA2;
+  }
+  header .navbar {
+    margin-bottom: 5px;
+  }
+  header .navbar-default .navbar-nav > li > a {
+    padding-top: 0;
+  }
+  header .navbar-nav {
+    padding: 5px;
+  }
+  header .navbar-nav > li {
+    max-width: 130px;
+  }
+  header .navbar-nav > li.menu-current {
+    background-color: inherit;
+  }
+
+  footer {
+    bottom: 0;
+  }
+
+  .logo-uas {
+    min-height: 175px;
+  }
+}
