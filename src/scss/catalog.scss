@@ -3,7 +3,7 @@
 // @Email:  ctosterhout@alaska.edu
 // @Project: divesemester
 // @Last modified by:   ctosterhout
-// @Last modified time: 2017-06-05T09:24:44-08:00
+// @Last modified time: 2017-06-20T09:44:07-08:00
 // @License: Released under MIT License. Copyright 2016 University of Alaska Southeast.  For more details, see https://opensource.org/licenses/MIT
 
 @import "partials/base";
@@ -100,9 +100,22 @@ footer {
     color: $color-main-menu;
 }
 
-.navbar-nav > li > a {
-    &:hover, &:active {
-        border-bottom: $border-menu-link-hover;
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    li {
+        align-items: stretch;
+        border-bottom: $border-menu-link-default;
+        &:hover {
+            border-bottom: $border-menu-link-hover;
+        }
+
+        & > a:hover {
+            color: $color-li-hover;
+            font-weight: 700;
+        }
     }
 }
 
@@ -174,7 +187,7 @@ footer {
     }
 
     .panel-body {
-        border-left: 2px solid $color-uas-green;
+        border-left: 2px solid $color-panel-menu-header-bg;
     }
 
     box-shadow: none;
@@ -246,8 +259,11 @@ footer {
         }
 
         .navbar-nav {
-            padding: 5px;
+            padding: 0;
+            letter-spacing: 0.06em;
             text-align: center;
+            text-transform: uppercase;
+            border-bottom: $border-navbar-main;
 
             &>li:not(:first-of-type) {
                 // border-left: 1px solid $color-near-white;
