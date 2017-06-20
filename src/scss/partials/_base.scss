@@ -3,7 +3,7 @@
 // @Email:  ctosterhout@alaska.edu
 // @Project: catalog
 // @Last modified by:   ctosterhout
-// @Last modified time: 2017-06-20T09:42:20-08:00
+// @Last modified time: 2017-06-20T10:17:59-08:00
 // @License: Released under MIT License. Copyright 2016 University of Alaska Southeast.  For more details, see https://opensource.org/licenses/MIT
 
 @import 'paths';
@@ -50,7 +50,8 @@ $width-main: 1200px;
         h2: ( font-family: $font-family-header, font-size: 2rem, font-weight: 400, color: #072B65 ),
         h3: ( font-family: $font-family-header, font-size: 1.8rem, font-weight: 400, color: #1C1C1C ),
         h4: ( font-family: $font-family-header, font-size: 1.6rem, font-weight: 400, color: #1C1C1C ),
-        h5: ( font-family: $font-family-header, font-size: 1.4rem, font-weight: 700, color: #1C1C1C ),
+        h5: ( font-family: $font-family-header, font-size: 1.5rem, font-weight: 700, color: #1C1C1C ),
+        h6: ( font-family: $font-family-header, font-size: 1.4rem, font-weight: 700, color: #1C1C1C ),
         copy: ( font-family: $font-family-body, font-size: 1.4rem, font-weight: 400, color: #000 ),
         tag: ( font-family: $font-family-header, font-size: 1.5rem, font-weight: 400, color: $color-dark-gray ),
         navlist: ( font-family: $font-family-body, font-size: 1.4rem, font-weight: 400, color: #000 ),
