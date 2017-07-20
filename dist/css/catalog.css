@@ -1,9 +1,9 @@
 /*!
  * University of Alaska Southeast
- * http://alaska.github.com/ctosterhout/catalog/
+ * http://github.alaska.edu/ctosterhout/catalog/
  * @author Colin Osterhout (ctosterhout@alaska.edu)
- * @version 0.1.0, compiled Wed, 31 May 2017 18:45:17 GMT
- * Copyright (c) 2017 University of Alaska Southeast. For licensing information, see http://github.com/costerhout/homepage/LICENSE.
+ * @version 0.2.0, compiled Tue, 20 Jun 2017 18:19:44 GMT
+ * Copyright (c) 2017 University of Alaska Southeast. For licensing information, see http://github.alaska.edu/ctosterhout/catalog/LICENSE.
  */
 
 @import url("https://fonts.googleapis.com/css?family=Lato|Roboto");
@@ -153,6 +153,14 @@ h4 {
 }
 
 h5 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1C1C1C;
+  font-family: "Lato", sans-serif;
+}
+
+h6 {
   font-size: 22.4px;
   font-size: 1.4rem;
   font-weight: 700;
@@ -194,8 +202,37 @@ footer {
   background: linear-gradient(to bottom, #d4e2ec, white 25%, white);
 }
 
-.navbar-nav > li > a:hover, .navbar-nav > li > a:active {
+.navbar-default .navbar-nav > li > a {
+  color: #656565;
+}
+
+.navbar-nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+.navbar-nav li {
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  border-bottom: 4px solid transparent;
+}
+.navbar-nav li:hover {
   border-bottom: 4px solid #8dca46;
+}
+.navbar-nav li > a:hover {
+  color: #000;
+  font-weight: 700;
 }
 
 .navbar-nav > li.menu-current {
@@ -269,14 +306,14 @@ footer {
 }
 .panel-menu > .panel-heading {
   color: #FFF;
-  background-color: #219ADE;
-  border-color: #219ADE;
+  background-color: #005c9e;
+  border-color: #005c9e;
 }
 .panel-menu > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: #8dca46;
 }
 .panel-menu > .panel-heading .badge {
-  color: #219ADE;
+  color: #005c9e;
   background-color: #FFF;
 }
 .panel-menu > .panel-footer + .panel-collapse > .panel-body {
@@ -286,14 +323,14 @@ footer {
   color: #FFF;
 }
 .panel-menu .panel-body {
-  border-left: 2px solid #8dca46;
+  border-left: 2px solid #005c9e;
 }
 
 .tag-content {
   font-size: 24px;
   font-size: 1.5rem;
   font-weight: 400;
-  color: #5F5D5D;
+  color: #656565;
   font-family: "Lato", sans-serif;
   text-align: right;
   text-transform: uppercase;
@@ -336,7 +373,11 @@ footer {
     padding-top: 0;
   }
   header .navbar-nav {
-    padding: 5px;
+    padding: 0;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid #8dca46;
   }
   header .navbar-nav > li {
     max-width: 130px;
