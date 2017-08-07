@@ -4,10 +4,10 @@
 # @Email:  ctosterhout@alaska.edu
 # @Project: catalog
 # @Last modified by:   ctosterhout
-# @Last modified time: 2017-06-05T11:26:54-08:00
+# @Last modified time: 2017-07-24T13:39:14-08:00
 
 header('Content-type: text/xml');
 $code = $_GET["code"];
-$response = file_get_contents("http://uas-alaska-preview.courseleaf.com/ribbit/?page=getprogram.rjs&code=" . urlencode($code));
+$response = file_get_contents("http://catalog.uas.alaska.edu/ribbit/?page=getprogram.rjs&code=" . urlencode($code));
 print($response);
 ?>
