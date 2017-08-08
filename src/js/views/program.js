@@ -4,7 +4,7 @@
  * @Email:  ctosterhout@alaska.edu
  * @Project: BERT
  * @Last modified by:   ctosterhout
- * @Last modified time: 2017-08-06T17:04:12-08:00
+ * @Last modified time: 2017-08-06T17:33:10-08:00
  * @License: Released under MIT License. Copyright 2016 University of Alaska Southeast.  For more details, see https://opensource.org/licenses/MIT
  */
 
@@ -13,10 +13,10 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    '/api/js/modules/course.js',
+    '/catalog/js/modules/course.js',
 
     // Include template for display of decision tree step
-    'hbs!/api/js/templates/program'
+    'hbs!/catalog/js/templates/program'
 ], function (module, $, _, Backbone, Course, templateProgram) {
     'use strict';
 

@@ -4,7 +4,7 @@
  * @Email:  ctosterhout@alaska.edu
  * @Project: BERT
  * @Last modified by:   ctosterhout
- * @Last modified time: 2017-08-06T16:47:57-08:00
+ * @Last modified time: 2017-08-08T13:01:44-08:00
  * @License: Released under MIT License. Copyright 2016 University of Alaska Southeast.  For more details, see https://opensource.org/licenses/MIT
  */
 
@@ -45,7 +45,7 @@ define([
 
                 // If the element we're operating on is an A element then start popup
                 if ($(that.el).is('a')) {
-                    // Strip all course bubble links
+                    // Strip all course bubble links - we don't support nested bubbles
                     $('a.bubblelink', nodeContent).contents().unwrap();
                     $(that.el).popover(_.defaults({
                         title: that.model.attributes.course.code,
@@ -53,7 +53,10 @@ define([
                         content: nodeContent
                     }, optionsPopoverDefault));
 
+                    // Display the popup to the user
                     $(that.el).popover('show');
+
+                    // Insert handler on the body so that clicks outside of the popup squash it
                     $('body').click(squashPopup);
                 }
 
