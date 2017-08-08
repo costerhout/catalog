@@ -3,12 +3,12 @@
  * @Date:   2017-06-02T14:58:55-08:00
  * @Project: catalog
  * @Last modified by:   ctosterhout
- * @Last modified time: 2017-08-06T16:45:08-08:00
+ * @Last modified time: 2017-08-06T17:31:04-08:00
  */
 
 define([
     'models/base',
-    '/api/js/views/course.js',
+    '/catalog/js/views/course.js',
     'backbone',
     'lib/debug'
 ], function (Model, View, Backbone, debug) {
@@ -16,7 +16,7 @@ define([
 
     // Module configuration for this module is done in the module itself rather than in a configuration file
     var urlProxyCourseDefault = '/catalog/api/getcourse.php',
-        templatePath = '/api/js/templates/course';
+        templatePath = '/catalog/js/templates/course';
 
     function Module(options) {
         // Craft the options for the model to pass along to the base model

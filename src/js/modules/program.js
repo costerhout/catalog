@@ -3,12 +3,12 @@
  * @Date:   2017-06-02T14:58:55-08:00
  * @Project: catalog
  * @Last modified by:   ctosterhout
- * @Last modified time: 2017-08-06T16:45:42-08:00
+ * @Last modified time: 2017-08-06T17:15:26-08:00
  */
 
 define([
     'models/base',
-    '/api/js/views/program.js',
+    '/catalog/js/views/program.js',
     'backbone',
     'lib/debug'
 ], function (Model, View, Backbone, debug) {
@@ -16,7 +16,7 @@ define([
 
     var urlProxyProgramDefault = '/catalog/api/getprogram.php',
         urlProxyCourseDefault = '/catalog/api/getcourse.php',
-        templatePath = '/api/js/templates/program';
+        templatePath = '/catalog/js/templates/program';
 
     // Create the model factory
     function Module(options) {
